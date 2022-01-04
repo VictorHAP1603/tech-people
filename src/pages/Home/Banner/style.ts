@@ -21,6 +21,7 @@ export const Container = styled.section`
 
   .content {
     padding: 100px 0px 50px 0px;
+
     h1 {
       color: ${(p) => p.theme.colors.black3};
       font-size: 56px;
