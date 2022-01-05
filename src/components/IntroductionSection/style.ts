@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeBottom } from "../../styles/globalStyles";
 
 export const Container = styled.div`
   text-align: center;
@@ -16,5 +17,18 @@ export const Container = styled.div`
     font-size: 22px;
     line-height: 38px;
     color: ${(p) => p.theme.colors.gray};
+    margin-bottom: 75px;
+  }
+
+  &.fade {
+    h2 {
+      opacity: 0;
+      animation: ${fadeBottom} 0.8s 1.2s forwards;
+    }
+
+    p {
+      opacity: 0;
+      animation: ${fadeBottom} 0.8s 1.5s forwards;
+    }
   }
 `;

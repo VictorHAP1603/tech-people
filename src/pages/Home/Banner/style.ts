@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { fadeRight, fadeBottom } from "../../../styles/globalStyles";
+
 
 const circleScale = keyframes`
     to {
@@ -26,6 +28,8 @@ export const Container = styled.section`
       color: ${(p) => p.theme.colors.black3};
       font-size: 56px;
       line-height: 66px;
+      transition: all .5s;
+      animation: ${fadeRight} 0.8s forwards;
 
       span {
         color: ${(p) => p.theme.colors.primary};
@@ -39,6 +43,10 @@ export const Container = styled.section`
       line-height: 38px;
       color: ${(p) => p.theme.colors.gray};
       width: 50%;
+      opacity: 0;
+      animation: ${fadeRight} 0.8s 0.4s forwards;
+      /* animation-delay: 0.8s; */
+
     }
 
     > button {
@@ -53,6 +61,10 @@ export const Container = styled.section`
 
       border-radius: 8px;
       transition: all 0.5s;
+      opacity: 0;
+
+      animation: ${fadeBottom} 0.8s 0.8s forwards;
+
 
       p {
         color: ${(p) => p.theme.colors.white};
@@ -74,7 +86,7 @@ export const Container = styled.section`
   .student {
     position: absolute;
     right: 100px;
-    top: 120px;
+    bottom: 0px;
     z-index: 11;
     transition: all 0.5s;
     transform: translateY(100%);
@@ -91,7 +103,7 @@ export const Container = styled.section`
 
     z-index: 10;
     border-radius: 75%;
-    transform: translateX(50%) translateY(30%) scale(0);
+    transform: translateX(40%) translateY(30%) scale(0);
 
     transition: all 0.5s;
 

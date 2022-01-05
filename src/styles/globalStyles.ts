@@ -1,4 +1,40 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
+
+export const fadeRight = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+`
+
+export const fadeLeft = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+`
+
+export const fadeBottom = keyframes`
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+`
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -33,7 +69,11 @@ export const GlobalStyles = createGlobalStyle`
     .container {
         margin: 0 auto;
         max-width: 1180px;
-        padding: 0 10px;
+        padding: 0 15px;
         height: 100%;
+
+        @media (min-width: 1800px) {
+            max-width: 1480px;
+        }
     }
 `;
