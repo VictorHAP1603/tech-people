@@ -32,10 +32,29 @@ export const Container = styled.header`
     align-items: center;
 
     button {
-      margin: 0 5px;
+      margin: 0 10px;
       padding: 0 15px;
       font-size: 17px;
       font-weight: 500;
+      position: relative;
+      width: fit-content;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width:  0%;
+        height: 2px;
+        background-color: ${p => p.theme.colors.black};
+        transition: all .4s;
+      }
+
+      &:hover {
+        &::after {
+          width:  100%;
+        }
+      }
     }
   }
 
@@ -52,6 +71,18 @@ export const Container = styled.header`
     nav {
       button {
         color: ${(p) => p.theme.colors.white};
+        height: 100%;
+        transition: all .4s;
+
+        &::after {
+        content: '';
+          display: none;
+        }
+
+        &:hover {
+          background-color: ${p => p.theme.colors.primary};
+          filter: brightness(.8);
+        }
       }
     }
   }
