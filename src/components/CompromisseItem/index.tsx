@@ -4,10 +4,11 @@ import { Container } from "./style";
 
 export type CompromisseItemProps = {
   color: "primary" | "orange" | "blue" | "green";
-  Image: React.ElementType;
+  src: string;
 
   title: string;
   text: string;
+  alt: string;
 }
 
 type Props = {
@@ -15,14 +16,17 @@ type Props = {
 }
 
 export const CompromisseItem = ({ data }: Props) => {
-  const { color, Image, text, title } = data
+  const { color, src, text, title, alt } = data
 
-  return <Container>
-    <div>
-      <Image />
-    </div>
 
-    <p className="title"></p>
-    <p className="text"></p>
-  </Container>;
+  return (
+    <Container color={color}>
+      <div className="image" >
+        <img src={src} alt={alt} />
+      </div>
+
+      <p className="title">{title}</p>
+      <p className="text">{text}</p>
+    </Container>
+  )
 };
