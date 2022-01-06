@@ -7,4 +7,5 @@ export const Container = styled.section`
 export const ContainerCompromisse = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
 `;
