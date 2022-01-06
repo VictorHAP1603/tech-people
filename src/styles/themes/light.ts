@@ -11,6 +11,7 @@ export const light = {
     black2: "#565656",
     black3: "#2F2F2F",
     gray: "#7D7D7D",
+    gray2: "#37474F",
     white: "#fff",
 
     danger: "#FF5959",
