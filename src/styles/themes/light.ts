@@ -2,7 +2,7 @@ export const light = {
   title: "light",
   colors: {
     primary: "#717CFF",
-    background: "#f2f2f2",
+    background: "#FAFAFA",
 
     blue: "#5C96FF",
     orange: "#FA706C",
