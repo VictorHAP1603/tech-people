@@ -20,6 +20,7 @@ export const Container = styled.section`
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
   overflow: hidden;
+    margin-top: 13vh;
 
   .content {
     padding: 100px 0px 50px 0px;
