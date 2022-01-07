@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Container = styled.header`
   height: 13vh;
   transition: all 0.4s;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 999;
+  width: 100%;
 
   .container {
     display: flex;
