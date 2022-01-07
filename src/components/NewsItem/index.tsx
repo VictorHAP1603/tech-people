@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCalendar } from "react-icons/fa";
+import { formatDate } from "../../helpers/formatDate";
 import { GetNewsProps } from "../../pages/Home/News";
 
 import { Container } from "./style";
@@ -19,8 +20,8 @@ export const NewsItem = ({ data }: Props) => {
 
       <div className="content">
         <span>
-          <FaCalendar />
-          {createdAt}
+          <FaCalendar size={24} />
+          {formatDate(createdAt)}
         </span>
 
         <p>{title}</p>
