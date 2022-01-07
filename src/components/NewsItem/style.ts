@@ -13,5 +13,27 @@ export const Container = styled.div`
 
   .content {
     padding: 30px 25px;
+
+    span {
+      display: flex;
+      align-items: center;
+
+      color: #656465;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 18px;
+
+      svg {
+        fill: #565656;
+        margin-right: 14px;
+      }
+    }
+
+    p {
+      color: #656465;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 `;
