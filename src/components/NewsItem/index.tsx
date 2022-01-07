@@ -15,7 +15,7 @@ export const NewsItem = ({ data }: Props) => {
   return (
     <Container>
       <div className="image">
-        <img src={src} alt="Notícia" />
+        <img src={src} alt="Notícia" loading="lazy" />
       </div>
 
       <div className="content">

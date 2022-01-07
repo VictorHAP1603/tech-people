@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 30%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+  transition: all 0.4s;
 
   .image {
     img {
@@ -35,5 +36,10 @@ export const Container = styled.div`
       font-size: 22px;
       line-height: 26px;
     }
+  }
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
   }
 `;
