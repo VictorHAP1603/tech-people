@@ -6,6 +6,7 @@ import { Container } from "./style";
 import { Banner } from "./Banner";
 import { OurCompromisse } from "./OurCompromise";
 import { News } from "./News";
+import { OurSchedule } from "./OurSchedule";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       <Banner />
       <OurCompromisse />
       <News />
+      <OurSchedule />
     </Container>
   );
 };
