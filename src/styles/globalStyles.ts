@@ -72,8 +72,5 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0 15px;
         height: 100%;
 
-        @media (min-width: 1800px) {
-            max-width: 1480px;
-        }
     }
 `;
