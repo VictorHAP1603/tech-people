@@ -23,6 +23,7 @@ export const Container = styled.div`
       font-weight: bold;
       font-size: 16px;
       margin-bottom: 18px;
+      text-transform: capitalize;
 
       svg {
         fill: #565656;
