@@ -1,7 +1,16 @@
+import moment from 'moment'
+import 'moment/locale/pt-br'
+
+moment.locale('pt-br')
+
 export const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString('pt-BR', {
-        day: "2-digit",
-        month: "short",
-        year: "numeric"
-    })
+    const dateTime = moment(date).format('DD MMM YYYY')
+    return dateTime
+}
+
+export const formatDateSchedule = (date: string) => {
+    const day = moment(date).format('DD')
+    const month = moment(date).format('MMM')
+
+    return { day, month }
 }
