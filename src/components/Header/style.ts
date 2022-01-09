@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  height: 13vh;
+  height: 110px;
   transition: all 0.4s;
   position: fixed;
   top: 0;
@@ -61,7 +61,7 @@ export const Container = styled.header`
 
   &.active {
     background-color: ${(p) => p.theme.colors.primary};
-    height: 10vh;
+    height: 90px;
 
     .logo {
       img {
