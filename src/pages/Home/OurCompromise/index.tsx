@@ -69,7 +69,7 @@ const compromisses: CompromisseItemProps[] = [
 
 export const OurCompromisse = () => {
   return (
-    <Container className="container">
+    <Container id="compromisses" className="container">
       <IntroductionSection title="Nosso Compromisso" delay={1}>
         Temos um compromisso de fazer desafios e gerar avaliações precisas para
         que você saiba o quanto está evoluíndo. Acreditamos que você merece uma

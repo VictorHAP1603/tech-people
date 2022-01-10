@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
+import { Link } from 'react-scroll'
 
 import { Container } from "./style";
 
@@ -7,8 +8,11 @@ import { Container } from "./style";
 import ImgStudent from "../../../assets/images/student.png";
 
 export const Banner = () => {
+
+
+
   return (
-    <Container className="container">
+    <Container id="home" className="container">
       <div className="content">
         <h1>
           Somos um servidor <br />
@@ -21,10 +25,10 @@ export const Banner = () => {
           colocação para você. Quer fazer parte? Clique no botão abaixo:
         </p>
 
-        <button>
+        <Link to="compromisses" smooth offset={-30} >
           <p>Participar</p>
           <FaArrowDown size={18} />
-        </button>
+        </Link>
       </div>
 
       <div className="student">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-scroll'
 
 import { Container } from "./style";
 
@@ -23,10 +24,10 @@ export const Header = () => {
         <Logo />
 
         <nav>
-          <button>Home</button>
-          <button>Compromisso</button>
-          <button>Notícias</button>
-          <button>Agenda</button>
+          <Link to="home" smooth offset={-30}>Home</Link>
+          <Link to="compromisses" smooth offset={-30}>Compromisso</Link>
+          <Link to="news" smooth offset={-30}>Notícias</Link>
+          <Link to="schedules" smooth offset={-30}>Agenda</Link>
         </nav>
 
       </div>

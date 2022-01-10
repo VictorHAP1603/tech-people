@@ -32,13 +32,15 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
 
-    button {
+    a {
       margin: 0 10px;
       padding: 0 15px;
       font-size: 17px;
       font-weight: 500;
       position: relative;
       width: fit-content;
+      display: block;
+      cursor: pointer;
 
       &::after {
         content: '';
@@ -70,10 +72,12 @@ export const Container = styled.header`
     }
 
     nav {
-      button {
+      a {
         color: ${(p) => p.theme.colors.white};
         height: 100%;
         transition: all .4s;
+        display: flex;
+        align-items: center;
 
         &::after {
         content: '';

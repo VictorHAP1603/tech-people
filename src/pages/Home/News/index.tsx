@@ -26,7 +26,7 @@ export const News = () => {
   }, []);
 
   return (
-    <Container>
+    <Container id="news">
       <div className="container">
         <IntroductionSection title="Notícias">
           Listamos abaixo algumas notícias de tecnologia que nos motivam a estar

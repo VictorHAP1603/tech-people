@@ -49,7 +49,7 @@ export const Container = styled.section`
 
     }
 
-    > button {
+    > a {
       width: 25%;
       margin-top: 40px;
       display: flex;
@@ -64,7 +64,7 @@ export const Container = styled.section`
       opacity: 0;
 
       animation: ${fadeBottom} 0.8s 0.8s forwards;
-
+      cursor: pointer;
 
       p {
         color: ${(p) => p.theme.colors.white};

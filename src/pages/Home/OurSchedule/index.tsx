@@ -34,7 +34,7 @@ export const OurSchedule = () => {
   }
 
 
-  return <Container className="container">
+  return <Container id="schedules" className="container">
     <IntroductionSection title="Anota ai na nossa agenda">
       Temos um monte de eventos que estamos criando no nosso servidor. Fique de olho que sempre tem coisa boa!
     </IntroductionSection>
