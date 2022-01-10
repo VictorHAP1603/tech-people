@@ -8,8 +8,7 @@ import { Footer } from "./components/Footer";
 // Pages
 import { Home } from "./pages/Home";
 
-// if (process.env.NODE_ENV === 'development') makeServer()
-makeServer();
+if (process.env.NODE_ENV === "development") makeServer();
 
 function App() {
   return (
