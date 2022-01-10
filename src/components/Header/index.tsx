@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-scroll'
+import { Link, animateScroll } from "react-scroll";
 
 import { Container } from "./style";
 
@@ -21,15 +21,22 @@ export const Header = () => {
   return (
     <Container className={scrollInTop ? "active" : ""}>
       <div className="container">
-        <Logo />
+        <Logo onClick={() => animateScroll.scrollToTop()} />
 
         <nav>
-          <Link to="home" smooth offset={-30}>Home</Link>
-          <Link to="compromisses" smooth offset={-30}>Compromisso</Link>
-          <Link to="news" smooth offset={-30}>Notícias</Link>
-          <Link to="schedules" smooth offset={-30}>Agenda</Link>
+          <Link to="home" smooth offset={-30}>
+            Home
+          </Link>
+          <Link to="compromisses" smooth offset={-30}>
+            Compromisso
+          </Link>
+          <Link to="news" smooth offset={-30}>
+            Notícias
+          </Link>
+          <Link to="schedules" smooth offset={-30}>
+            Agenda
+          </Link>
         </nav>
-
       </div>
     </Container>
   );

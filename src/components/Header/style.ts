@@ -19,6 +19,7 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     transition: all 0.4s;
+    cursor: pointer;
 
     img {
       height: 60%;
@@ -43,19 +44,19 @@ export const Container = styled.header`
       cursor: pointer;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
-        width:  0%;
+        width: 0%;
         height: 2px;
-        background-color: ${p => p.theme.colors.black};
-        transition: all .4s;
+        background-color: ${(p) => p.theme.colors.black};
+        transition: all 0.4s;
       }
 
       &:hover {
         &::after {
-          width:  100%;
+          width: 100%;
         }
       }
     }
@@ -75,18 +76,18 @@ export const Container = styled.header`
       a {
         color: ${(p) => p.theme.colors.white};
         height: 100%;
-        transition: all .4s;
+        transition: all 0.4s;
         display: flex;
         align-items: center;
 
         &::after {
-        content: '';
+          content: "";
           display: none;
         }
 
         &:hover {
-          background-color: ${p => p.theme.colors.primary};
-          filter: brightness(.8);
+          background-color: ${(p) => p.theme.colors.primary};
+          filter: brightness(0.8);
         }
       }
     }

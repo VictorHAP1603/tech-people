@@ -4,9 +4,11 @@ export const Container = styled.div`
   width: 30%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  transition: all 0.4s;
 
   .image {
+    transition: all 0.4s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
     img {
       width: 100%;
     }
@@ -40,7 +42,10 @@ export const Container = styled.div`
   }
 
   &:hover {
-    transform: translateY(-15px);
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    .image {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      opacity: 0.7;
+    }
   }
 `;

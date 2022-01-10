@@ -1,11 +1,15 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 
-import ImgLogo from '../../assets/images/logo.svg'
+import ImgLogo from "../../assets/images/logo.svg";
 
-export const Logo = () => {
+type Props = {
+  onClick?: () => void;
+};
+
+export const Logo = ({ ...rest }: Props) => {
   return (
-    <div className="logo">
+    <div className="logo" {...rest}>
       <img src={ImgLogo} alt="Logo Tech People Dark" />
     </div>
-  )
+  );
 };
