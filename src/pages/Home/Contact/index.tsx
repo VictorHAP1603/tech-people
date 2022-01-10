@@ -116,7 +116,7 @@ export const Contact = () => {
             placeholder="Telefone celular"
             {...register("celphone", {
               required: true,
-              pattern: /^\([1-9]{2}\) (9[1-9])[0-9]{3}\-[0-9]{4}$/,
+              pattern: /^\([1-9]{2}\) (9[1-9])[0-9]{3}-[0-9]{4}$/,
             })}
           />
 
