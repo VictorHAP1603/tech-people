@@ -107,11 +107,15 @@ export const Container = styled.div`
             }
         }
 
-        span {
+        > div {
             display: flex;
             align-items: center;
 
-            time {
+            svg {
+                fill: ${p => p.theme.colors.black};
+            }
+
+            span {
                 margin-left: 10px;
                 color: ${p => p.theme.colors.black};
                 font-weight: 900;

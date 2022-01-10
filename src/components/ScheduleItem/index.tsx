@@ -39,10 +39,10 @@ export const ScheduleItem = ({ data }: Props) => {
         <FaArrowRight size={18} />
       </button>
 
-      <span>
+      <div>
         <FaClock />
-        <time>{startTime} - {finalTime}</time>
-      </span>
+        <span>{startTime} - {finalTime}</span>
+      </div>
 
     </div>
   </Container>;
