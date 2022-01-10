@@ -31,7 +31,7 @@ const variants = {
 
 export const ScheduleItem = ({ data }: Props) => {
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
   });
   const controls = useAnimation();
 

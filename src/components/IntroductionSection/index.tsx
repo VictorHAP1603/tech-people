@@ -21,7 +21,7 @@ const variants = {
 
 export const IntroductionSection = ({ title, children, delay }: Props) => {
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.5,
   });
   const controls = useAnimation();
 

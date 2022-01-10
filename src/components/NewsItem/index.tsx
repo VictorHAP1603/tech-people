@@ -23,7 +23,7 @@ const variants = {
 
 export const NewsItem = ({ data }: Props) => {
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
   });
   const controls = useAnimation();
 
