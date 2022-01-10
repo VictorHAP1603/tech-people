@@ -1,5 +1,11 @@
 import React from "react";
 
-export const Index = () => {
-  return <div></div>;
+import ImgLogo from '../../assets/images/logo.svg'
+
+export const Logo = () => {
+  return (
+    <div className="logo">
+      <img src={ImgLogo} alt="Logo Tech People Dark" />
+    </div>
+  )
 };

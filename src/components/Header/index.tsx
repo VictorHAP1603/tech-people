@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { Container } from "./style";
 
-import Logo from "../../assets/images/logo.svg";
+// Components
+import { Logo } from "../Logo";
 
 export const Header = () => {
   const [scrollInTop, setScrollOnTop] = useState(true);
@@ -19,9 +20,7 @@ export const Header = () => {
   return (
     <Container className={scrollInTop ? "active" : ""}>
       <div className="container">
-        <div className="logo">
-          <img src={Logo} alt="Logo Tech People Dark" />
-        </div>
+        <Logo />
 
         <nav>
           <button>Home</button>

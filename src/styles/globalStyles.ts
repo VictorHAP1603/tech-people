@@ -66,11 +66,15 @@ export const GlobalStyles = createGlobalStyle`
         object-fit: cover;
     }
 
+    main {
+        margin-top: 110px;
+    }
+
     .container {
         margin: 0 auto;
         max-width: 1180px;
         padding: 0 15px;
         height: 100%;
-
+        width: 100%;
     }
 `;
