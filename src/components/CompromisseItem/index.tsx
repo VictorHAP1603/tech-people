@@ -18,7 +18,7 @@ type Props = {
   index: number;
 };
 
-const CompromisseVariants = {
+const variants = {
   visible: {
     opacity: 1,
     x: 0,
@@ -47,7 +47,7 @@ export const CompromisseItem = ({ data, index }: Props) => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      variants={CompromisseVariants}
+      variants={variants}
     >
       <div className="image">
         <img src={src} alt={alt} />
