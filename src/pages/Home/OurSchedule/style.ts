@@ -11,6 +11,7 @@ export const Container = styled.section`
 
 export const SchedulesSlider = styled.div<SchedulesSlider>`
   overflow-x: hidden;
+  padding: 10px 0;
 
   > div {
     display: flex;
