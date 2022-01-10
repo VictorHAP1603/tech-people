@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const spinner = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const Container = styled(motion.section)`
   padding: 80px 0px 100px 0px !important;
@@ -42,7 +48,7 @@ export const Container = styled(motion.section)`
       font-size: 18px;
 
       &:focus {
-        border-color: ${(p) => p.theme.colors.primary};
+        border: 2px solid #909090;
       }
 
       &::placeholder {
@@ -53,6 +59,11 @@ export const Container = styled(motion.section)`
 
       & + input {
         margin-left: 30px;
+      }
+
+      &.error {
+        border: 2px solid ${(p) => p.theme.colors.danger};
+        background-color: #f9ecec;
       }
     }
 
@@ -75,6 +86,57 @@ export const Container = styled(motion.section)`
       svg {
         fill: ${(p) => p.theme.colors.gray2};
       }
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+
+  .loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      animation: ${spinner} 1s infinite;
+      /* transition: all 0.5s; */
+    }
+
+    p {
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+
+  .success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 37px;
+      color: ${(p) => p.theme.colors.black};
+    }
+
+    .text {
+      color: rgba(55, 71, 79, 0.72);
+      font-size: 18px;
+      margin: 10px 0px 40px 0px;
+    }
+
+    button {
+      background-color: ${(p) => p.theme.colors.primary};
+      color: ${(p) => p.theme.colors.white};
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-size: 18px;
+
+      transition: all 0.4s;
 
       &:hover {
         filter: brightness(0.8);
