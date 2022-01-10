@@ -6,13 +6,13 @@ const api = axios.create({
 });
 
 export const GET_NEWS = async (): Promise<GetNewsProps[]> => {
-  const { data } = await api.get("/news");
+  const { data } = await api.get("/news.json");
 
   return data;
 };
 
 export const GET_SCHEDULES = async () => {
-  const { data } = await api.get("/schedules");
+  const { data } = await api.get("/schedules.json");
 
   return data;
 };
