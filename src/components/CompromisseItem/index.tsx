@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 import { Container } from "./style";
 
@@ -9,24 +11,50 @@ export type CompromisseItemProps = {
   title: string;
   text: string;
   alt: string;
-}
+};
 
 type Props = {
-  data: CompromisseItemProps
-}
+  data: CompromisseItemProps;
+  index: number;
+};
 
-export const CompromisseItem = ({ data }: Props) => {
-  const { color, src, text, title, alt } = data
+const CompromisseVariants = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.1, ease: [0.6, 0.05, -0.1, 0.9] },
+  },
+  hidden: { opacity: 0, x: -30 },
+};
 
+export const CompromisseItem = ({ data, index }: Props) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const controls = useAnimation();
+
+  const { color, src, text, title, alt } = data;
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [inView, controls]);
 
   return (
-    <Container color={color}>
-      <div className="image" >
+    <Container
+      color={color}
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={CompromisseVariants}
+    >
+      <div className="image">
         <img src={src} alt={alt} />
       </div>
 
       <p className="title">{title}</p>
       <p className="text">{text}</p>
     </Container>
-  )
+  );
 };

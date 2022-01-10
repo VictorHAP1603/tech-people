@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import { fadeBottom } from "../../styles/globalStyles";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   text-align: center;
 
   h2 {

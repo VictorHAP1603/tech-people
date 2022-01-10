@@ -77,8 +77,8 @@ export const OurCompromisse = () => {
       </IntroductionSection>
 
       <ContainerCompromisse>
-        {compromisses.map((data) => (
-          <CompromisseItem key={data.alt} data={data} />
+        {compromisses.map((data, index) => (
+          <CompromisseItem key={data.alt} data={data} index={index} />
         ))}
       </ContainerCompromisse>
     </Container>

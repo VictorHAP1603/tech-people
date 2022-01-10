@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type PropsContainer = {
   color: "primary" | "orange" | "blue" | "green";
 };
 
-export const Container = styled.div<PropsContainer>`
+export const Container = styled(motion.div)<PropsContainer>`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   transition: all 0.4s;
