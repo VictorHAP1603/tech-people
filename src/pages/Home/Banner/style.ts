@@ -15,7 +15,7 @@ const studentUp = keyframes`
 `;
 
 export const Container = styled.section`
-  height: 70vh;
+  height: max(70vh, 600px);
   position: relative;
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
