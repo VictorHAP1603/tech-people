@@ -121,4 +121,55 @@ export const Container = styled(motion.div)`
       }
     }
   }
+
+  @media (max-width: 800px) {
+    width: 98%;
+  }
+
+  @media (max-width: 450px) {
+    .header {
+      flex-direction: column;
+
+      .date {
+        width: 50%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+
+      }
+
+      > p {
+        text-align: center;
+      }
+    }
+
+    > p {
+      text-align: justify;
+    }
+
+    .footer {
+      flex-direction: column;
+
+      > div {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      button {
+        order: 2;
+        background-color: ${p => p.theme.colors.primary};
+        justify-content: center;
+        padding: 20px;
+        border-radius: 8px;
+
+        p {
+          color: ${p => p.theme.colors.white};
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
 `;

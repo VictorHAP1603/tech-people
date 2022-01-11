@@ -15,7 +15,7 @@ const studentUp = keyframes`
 `;
 
 export const Container = styled.section`
-  height: 70vh !important;
+  height: 70vh;
   position: relative;
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
@@ -27,7 +27,7 @@ export const Container = styled.section`
 
     h1 {
       color: ${(p) => p.theme.colors.black3};
-      font-size: 56px;
+      font-size: min(57px, 8vw);
       line-height: 66px;
       transition: all .5s;
       animation: ${fadeRight} 0.8s forwards;
@@ -123,6 +123,10 @@ export const Container = styled.section`
   }
 
   @media(max-width: 980px) {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+
+
     .content {
       a {
         width: 40%;
@@ -130,5 +134,40 @@ export const Container = styled.section`
     }
 
   }
- 
+  
+  @media (max-width: 768px) {
+
+    height: 70vh;
+    display: flex;
+    align-items: center;
+
+    .content {
+      padding: 0px;
+
+      > p {
+        width: 75%;
+      }
+
+      > a {
+        width: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 520px){
+    .content {
+      h1 {
+        line-height: 50px;
+      }
+
+      > p {
+        font-size: 18px;
+        width: 100%;
+      }
+
+      > a {
+        width: 75%;
+      }
+    }
+  }
 `;

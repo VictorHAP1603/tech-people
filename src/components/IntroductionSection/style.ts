@@ -8,7 +8,7 @@ export const Container = styled(motion.div)`
 
   h2 {
     font-weight: 700;
-    font-size: 37px;
+    font-size: min(37px, 8vw);
     line-height: 54px;
     margin-bottom: 25px;
     color: ${(p) => p.theme.colors.black};
@@ -16,7 +16,7 @@ export const Container = styled(motion.div)`
 
   p {
     font-weight: 500;
-    font-size: 22px;
+    font-size: min(22px, 5vw);
     line-height: 38px;
     color: ${(p) => p.theme.colors.gray};
     margin-bottom: 75px;
@@ -31,6 +31,12 @@ export const Container = styled(motion.div)`
     p {
       opacity: 0;
       animation: ${fadeBottom} 0.8s 1.5s forwards;
+    }
+  }
+
+  @media (max-width: 350px) {
+    p {
+      line-height: 30px;
     }
   }
 `;

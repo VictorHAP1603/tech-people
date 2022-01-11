@@ -122,12 +122,15 @@ export const Container = styled(motion.section)`
       font-weight: 700;
       font-size: 37px;
       color: ${(p) => p.theme.colors.black};
+      text-align: center;
+
     }
 
     .text {
       color: rgba(55, 71, 79, 0.72);
       font-size: 18px;
       margin: 10px 0px 40px 0px;
+      text-align: center;
     }
 
     button {

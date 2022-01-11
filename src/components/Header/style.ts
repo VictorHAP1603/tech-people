@@ -92,4 +92,8 @@ export const Container = styled.header`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    /* display: none; */
+  }
 `;

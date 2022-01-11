@@ -8,4 +8,21 @@ export const Container = styled.section`
 export const NewsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  > div {
+    width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    > div {
+      width: 100%;
+
+
+      & + div {
+        margin-top: 60px;
+      }
+    }
+  }
 `;
