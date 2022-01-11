@@ -109,4 +109,12 @@ export const Container = styled.section`
 
     animation: ${circleScale} 0.8s forwards;
   }
+
+  @media(max-width: 1080px) {
+    .content {
+      a {
+        width: 40%;
+      }
+    }
+  }
 `;

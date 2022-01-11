@@ -25,6 +25,7 @@ const variants = {
     transition: { duration: 0.1, ease: [0.6, 0.05, -0.1, 0.9] },
   },
   hidden: { opacity: 0, x: -30 },
+  hover: { y: -10 }
 };
 
 export const CompromisseItem = ({ data, index }: Props) => {
@@ -48,6 +49,7 @@ export const CompromisseItem = ({ data, index }: Props) => {
       initial="hidden"
       animate={controls}
       variants={variants}
+
     >
       <div className="image">
         <img src={src} alt={alt} />

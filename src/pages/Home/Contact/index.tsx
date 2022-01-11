@@ -32,7 +32,7 @@ export const Contact = () => {
   const [isFinished, setIsFinished] = useState(false);
 
   const controls = useAnimation();
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, resetField } = useForm();
 
   const { errors } = formState;
 
@@ -43,7 +43,7 @@ export const Contact = () => {
   }, [inView, controls]);
 
   const handleSubmitContact: SubmitHandler<ContactFormDate> = async (
-    values
+    values: ContactFormDate
   ) => {
     // aqui seria onde mandaria o email atraves da api
     console.log(values);
@@ -52,6 +52,10 @@ export const Contact = () => {
     setTimeout(() => {
       setLoading(false);
       setIsFinished(true);
+
+      resetField("name")
+      resetField("email")
+      resetField("celphone")
     }, 3000);
   };
 
