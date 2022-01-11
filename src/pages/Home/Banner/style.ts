@@ -23,6 +23,7 @@ export const Container = styled.section`
 
   .content {
     padding: 100px 0px 50px 0px;
+    
 
     h1 {
       color: ${(p) => p.theme.colors.black3};
@@ -85,7 +86,7 @@ export const Container = styled.section`
 
   .student {
     position: absolute;
-    right: 100px;
+    right: 70px;
     bottom: 0px;
     z-index: 11;
     transition: all 0.5s;
@@ -110,11 +111,24 @@ export const Container = styled.section`
     animation: ${circleScale} 0.8s forwards;
   }
 
-  @media(max-width: 1080px) {
+  @media (max-width: 1080px) {
+    .student {
+      right: 0px;
+    }
+
+    .circle {
+      transform: translateX(40%) translateY(30%) scale(0);
+
+    }
+  }
+
+  @media(max-width: 980px) {
     .content {
       a {
         width: 40%;
       }
     }
+
   }
+ 
 `;

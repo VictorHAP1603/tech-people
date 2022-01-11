@@ -69,6 +69,7 @@ export const Container = styled(motion.section)`
 
     button {
       margin-left: 30px;
+      margin-right: 10px;
       background-color: ${(p) => p.theme.colors.primary};
       color: ${(p) => p.theme.colors.white};
 
@@ -142,5 +143,31 @@ export const Container = styled(motion.section)`
         filter: brightness(0.8);
       }
     }
+  }
+
+
+  @media (max-width: 1080px) {
+    form {
+      flex-direction: column;
+        input, button {
+          width: 100%;
+        }
+
+        input {
+          & + input {
+          margin-left: 0px;
+          margin-top: 30px;
+        }
+        }
+
+        button {
+          margin-left: 0px;
+          margin-top: 30px;
+          padding: 20px;
+
+        }
+
+    }
+
   }
 `;

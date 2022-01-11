@@ -10,7 +10,7 @@ import ImgStudent from "../../../assets/images/student.png";
 
 export const Banner = () => {
 
-  const match = useMedia('(max-width: 1080px)')
+  const match = useMedia('(max-width: 980px)')
 
   return (
     <Container id="home" className="container">
