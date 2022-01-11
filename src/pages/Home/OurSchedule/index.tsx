@@ -12,18 +12,15 @@ export const OurSchedule = () => {
   const [schedules, setSchedules] = useState<ScheduleItemProps[]>([])
   const [controlsSlider, setControlsSlider] = useState<number[]>([])
   const [activeControlSlider, setActiveControlSlider] = useState(0)
-  const [slidesPerPage, setSlidesPerPage] = useState(2)
 
   const match = useMedia('(max-width: 800px)')
-
-
 
   useEffect(() => {
     async function requestSchedules() {
       const json = await GET_SCHEDULES();
       setSchedules(json)
 
-      formatControlsSlider(Math.ceil(json.length / slidesPerPage))
+      formatControlsSlider(Math.ceil(json.length / 2))
     }
 
     function formatControlsSlider(num: number) {
