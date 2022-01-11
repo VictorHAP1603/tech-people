@@ -1,17 +1,17 @@
 [
   {
     "src": "/assets/images/news/news1.png",
-    "createdAt": "04-17-2020",
+    "createdAt": "2020-04-17",
     "title": "Participe da nossa Live sobre React e testes TDD"
   },
   {
     "src": "/assets/images/news/news2.png",
-    "createdAt": "04-17-2020",
+    "createdAt": "2020-04-17",
     "title": "Participe da nossa live de Nuxt para a Turing"
   },
   {
     "src": "/assets/images/news/news3.png",
-    "createdAt": "04-17-2020",
+    "createdAt": "2020-04-17",
     "title": "Como apoiar uma desenvolvedora em início de carreira?"
   }
 ]

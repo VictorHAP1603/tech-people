@@ -98,6 +98,15 @@ export const Container = styled.header`
 
   &.mb {
 
+    .logo {
+      width: 50%;
+
+      img {
+        width: 150px;
+        object-fit: contain;
+      }
+    }
+
     nav {
       position: absolute;
       top: 110px;
@@ -121,12 +130,13 @@ export const Container = styled.header`
 
     button {
       width: 100px;
-      height: 60px;
+      height: 100%;
       /* background-color: black; */
 
       .menu {
         color: white;
         pointer-events: none;
+        transform: scale(.8);
       }
 
     }
