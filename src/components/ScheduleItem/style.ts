@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Container = styled(motion.div)`
   /* width: 48%; */
-  width: 48%;
+  /* width: 48%; */
   padding: 30px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -122,9 +122,7 @@ export const Container = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
-    width: 98%;
-  }
+
 
   @media (max-width: 450px) {
     .header {

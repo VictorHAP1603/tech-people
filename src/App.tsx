@@ -8,6 +8,10 @@ import { Footer } from "./components/Footer";
 // Pages
 import { Home } from "./pages/Home";
 
+
+// eslint-disable-next-line
+import "swiper/css/bundle";
+
 // if (process.env.NODE_ENV === "development") makeServer();
 
 function App() {

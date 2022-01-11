@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type SchedulesSliderProps = {
-  activeControl: number;
+  activeControl?: number;
 };
 
 export const Container = styled.section`
@@ -9,16 +9,27 @@ export const Container = styled.section`
 `;
 
 export const SchedulesSlider = styled.div<SchedulesSliderProps>`
-  overflow-x: hidden;
-  padding: 10px 0;
 
   > div {
-    display: flex;
-    justify-content: space-between;
-    transform: ${(p) => `translateX(-${p.activeControl * 100}%)`};
-
-    transition: all ease-out 0.3s;
+    padding-bottom: 50px;
   }
+
+ .swiper-pagination  {
+   bottom: 0px;
+
+   .swiper-pagination-bullet {
+      height: 10px;
+      width: 10px;
+      transition: all .4s;
+    }
+
+   .swiper-pagination-bullet-active {
+      height: 14px;
+      width: 14px;
+      background-color: ${(p) => p.theme.colors.primary};
+
+   }
+ }
 `;
 
 export const SchedulesControls = styled.div`
